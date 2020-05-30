@@ -24,7 +24,8 @@ public OnPlayerCommandText(playerid, cmdtext[])
 
   new function[48];
   format(function, sizeof(function), "cockmd_%s", cmdtext);
-
+  if(funcidx(function) == -1) return 1;
+  
   CallLocalFunction(function, "d", playerid);
   #if defined COCK_OnPlayerCommandText
     return COCK_OnPlayerCommandText(playerid, cmdtext[]);
