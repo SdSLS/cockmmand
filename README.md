@@ -1,38 +1,14 @@
 # CockMmand  
 **Fastest and easy-to-use command processor for SA-MP**  
-(for an actual command processor [use branch `processor`](https://github.com/leHeix/cockmmand/tree/processor))  
-^ not even recommended, use [y_commands](https://github.com/pawn-lang/YSI-Includes) or the faster [Pawn.CMD](https://github.com/urShadow/Pawn.CMD)
+not recommended, use [y_commands](https://github.com/pawn-lang/YSI-Includes) or the faster [Pawn.CMD](https://github.com/urShadow/Pawn.CMD)
 
 ## Usage
 Simply, use it like this:
 ```pawn
 #include <cockmmand>
-public OnPlayerCommandText(playerid, cmdtext[])
+COCKMD:mycommand(playerid)
 {
-    cockmmand("command_name")
-    {
-         // command code
-     }
-    return 1;
-}
-```
-To add more than one command, we made simple optimization, use:
-```pawn
-#include <cockmmand>
-public OnPlayerCommandText(playerid, cmdtext[])
-{
-    cockmmand("command_name")
-    {
-        // command code
-    }
-    cockmmand_multiple("command_2")
-    {
-        // code
-    }
-    cockmmand_multiple("command_3")
-    {
-        // code
-    }
+    //code
     return 1;
 }
 ```
