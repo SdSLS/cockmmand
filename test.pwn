@@ -1,17 +1,17 @@
 #include <a_samp>
 
 #define IS_SAMP_MOBILE false
-#define COCK_CASE_SENSITIVE true
-#include "cockmmand.inc"
+#define SLS_CASE_SENSITIVE true
+#include "slscmd.inc"
 
 public OnPlayerCommandText(playerid, cmdtext[])
 {
-	cockmmand("yadayada")
+	slscmd("yadayada")
 	{
-		SendClientMessage(playerid, -1, "Cockmmand!");
+		SendClientMessage(playerid, -1, "POU!");
 		return 1;
 	}
-	cockmmand_multiple("lul")
+	slscmd_multiple("lul")
 	{
 		SendClientMessage(playerid, -1, "Hi!");
 		return 1;
